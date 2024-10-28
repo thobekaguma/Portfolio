@@ -9,18 +9,18 @@
     <meta name="author" content="Thobeka Guma">
     <meta property="og:title" content="Thobeka Guma - Portfolio">
     <meta property="og:description" content="Portfolio showcasing the skills and projects of Thobeka Guma, a full-stack developer.">
-    <meta property="og:image" content="thobza.jpeg">
+    <meta property="og:image" content="images/thobza.jpeg">
     <meta property="og:url" content="https://your-portfolio-url.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Thobeka Guma - Portfolio">
     <meta name="twitter:description" content="Portfolio of Thobeka Guma, showcasing web development skills and projects.">
-    <meta name="twitter:image" content="thobza.jpeg">
+    <meta name="twitter:image" content="/images/.jpeg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="thobza.jpeg" alt="Thobeka Guma" class="profile-photo">
+        <img src="images/thobza.jpeg" alt="Thobeka Guma" class="profile-photo">
         <h1>Thobeka Guma</h1>
         <nav class="nav-container">
             <a href="#about">About Me</a>
@@ -48,15 +48,24 @@
             <h2>Projects Gallery</h2>
             <div class="gallery-container">
                 <div class="project-card">
-                    <img src="path/to/project-image.jpg" alt="Project Image">
+                    <img src="images/RPS.png" alt="Project Image">
                     <div class="project-info">
-                        <h3>Project Title</h3>
+                        <h3>Rock Paper Scissors</h3>
                         <p>Short description of the project.</p>
                         <a href="#" target="_blank">Live Demo</a> | 
-                        <a href="#" target="_blank">GitHub</a>
+                        <a href="https://github.com/thobekaguma/RPS-Game" target="_blank">GitHub</a>
                     </div>
                 </div>
                 <!-- Add more -->
+                <div class="project-card">
+                    <img src="images/portfolio.png" alt="Project Image">
+                    <div class="project-info">
+                        <h3>My Portfolio</h3>
+                        <p>Short description of the project.</p>
+                        <a href="#" target="_blank">Live Demo</a> | 
+                        <a href="https://github.com/thobekaguma/Portfolio" target="_blank">GitHub</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -75,14 +84,30 @@
             <h2>Certifications and Learning Journey</h2>
             <div class="certification-list">
                 <div class="certification-item">
-                    <img src="path/to/certificate-badge.png" alt="Certificate Badge">
+                    <img src="images/web-development-fundamentals.png" alt="Certificate Badge">
                     <div class="certification-info">
-                        <h3>Course Title</h3>
-                        <p>Brief description of what you learned.</p>
-                        <a href="#" target="_blank">View Certificate</a>
+                        <h3>Web Development Fundamentals</h3>
+                        <p>Description.</p>
+                        <a href="https://www.credly.com/badges/f826d27a-d0cb-4fbd-b4e0-d167f92bce7a/public_url" target="_blank">View Certificate</a>
                     </div>
                 </div>
-                <!-- Add more -->
+                <div class="certification-item">
+                    <img src="images/IBM-DB.png" alt="Certificate Badge">
+                    <div class="certification-info">
+                        <h3>SQL and Relational Databases 101</h3>
+                        <p>Description.</p>
+                        <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/f5bc04ce391d43ca9756ea7c756008c2" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <img src="images/python-developer.png" alt="Certificate Badge">
+                    <div class="certification-info">
+                        <h3>Python Developer</h3>
+                        <p>Description.</p>
+                        <a href="https://www.sololearn.com/certificates/CC-VMNCHVBW" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -90,10 +115,29 @@
             <h2>Tech Stack Explorer</h2>
             <div class="tech-list">
                 <div class="tech-item" onclick="showTechInfo('Java')">
-                    <img src="path/to/java-icon.png" alt="Java Icon">
+                    <img src="icons/java_original_wordmark_logo_icon_146459.svg" alt="Java Icon">
                     <p>Java</p>
                 </div>
-                <!-- Add more -->
+                <div class="tech-item" onclick="showTechInfo('Python')">
+                    <img src="icons/python_103279.svg" alt="Python Icon">
+                    <p>Python</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('SQL')">
+                    <img src="icons/sql-document-outlined-interface-symbol_icon-icons.com_57504.svg" alt="SQL Icon">
+                    <p>SQL</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('HTML')">
+                    <img src="icons/html_icon_245046.svg" alt="HTML Icon">
+                    <p>HTML</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('CSS')">
+                    <img src="icons/file_type_css_icon_130661.svg" alt="CSS Icon">
+                    <p>CSS</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('JavaScript')">
+                    <img src="icons/javascript_original_logo_icon_146455.svg" alt="JavaScript Icon">
+                    <p>JavaScript</p>
+                </div>
             </div>
             <div id="tech-info-modal" class="modal">
                 <div class="modal-content">

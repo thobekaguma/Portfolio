@@ -11,7 +11,7 @@ let darkTheme = false;
 themeToggleButton.addEventListener('click', () => {
     if (!darkTheme) {
         document.body.style.backgroundColor = '#333';
-        document.body.style.color = '#fff';
+        document.body.style.color = '#1571da';
         darkTheme = true;
     } else {
         document.body.style.backgroundColor = '#f0f0f3';
