@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thobeka Guma - Portfolio</title>
+    <meta name="description" content="Portfolio of Thobeka Guma, a full-stack developer skilled in Python, Java, HTML, CSS, JavaScript and Database Management. Showcasing projects and contact information.">
+    <meta name="keywords" content="fullstack developer, web developer, portfolio, java, python, sql, HTML, CSS, JavaScript, database management">
+    <meta name="author" content="Thobeka Guma">
+    <meta property="og:title" content="Thobeka Guma - Portfolio">
+    <meta property="og:description" content="Portfolio showcasing the skills and projects of Thobeka Guma, a full-stack developer.">
+    <meta property="og:image" content="images/thobza.jpeg">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thobeka Guma - Portfolio">
+    <meta name="twitter:description" content="Portfolio of Thobeka Guma, showcasing web development skills and projects.">
+    <meta name="twitter:image" content="/images/.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/images/IMG_3663.jpg" alt="Thobeka Guma" class="profile-photo">
+        <h1>Thobeka Guma</h1>
+        <nav class="nav-container">
+            <a href="#about">About Me</a>
+            <a href="#projects-gallery">Projects Gallery</a>
+            <a href="#skills-showcase">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#tech-stack">Tech Stack</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle">Dark</button>
+        </nav>
+    </header>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+
+    <main>
+        <section id="about" class="hero">
+            <h2>About Me</h2>
+            <p>I'm a web developer with a passion for creating engaging and user-friendly experiences. I love working on challenging projects that push my skills to the next level.</p>
+        </section>
+
+        <section id="tech-stack">
+            <h2>Tech Stack Explorer</h2>
+            <div class="tech-list">
+                <div class="tech-item" onclick="showTechInfo('Java')">
+                    <img src="/icons/java_original_wordmark_logo_icon_146459.svg" alt="Java Icon">
+                    <p>Java</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('Python')">
+                    <img src="/icons/python_103279.svg" alt="Python Icon">
+                    <p>Python</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('SQL')">
+                    <img src="/icons/sql-document-outlined-interface-symbol_icon-icons.com_57504.svg" alt="SQL Icon">
+                    <p>SQL</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('HTML')">
+                    <img src="/icons/html_icon_245046.svg" alt="HTML Icon">
+                    <p>HTML</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('CSS')">
+                    <img src="/icons/file_type_css_icon_130661.svg" alt="CSS Icon">
+                    <p>CSS</p>
+                </div>
+                <div class="tech-item" onclick="showTechInfo('JavaScript')">
+                    <img src="/icons/javascript_original_logo_icon_146455.svg" alt="JavaScript Icon">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div id="tech-info-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeModal()">&times;</span>
+                    <h3 id="tech-title">Tech Title</h3>
+                    <p id="tech-description">Details about the tool/technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-showcase">
+            <h2>Skills and Tools Showcase</h2>
+            <div class="skills-list">
+                <div class="skill-bar" style="--width: 90%;">Hosting on AWS Cloud</div>
+                <div class="skill-bar" style="--width: 80%;">Familiar with VSCode and JetBrains Editors</div>
+            </div>
+            <h3>Currently Learning</h3>
+            <p>Docker, ETL Pipelines.</p>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications and Learning Journey</h2>
+            <div class="certification-list">
+                <div class="certification-item">
+                    <img src="/images/web-development-fundamentals.png" alt="Certificate Badge">
+                    <div class="certification-info">
+                        <h3>Web Development Fundamentals</h3>
+                        <p>Description.</p>
+                        <a href="https://www.credly.com/badges/f826d27a-d0cb-4fbd-b4e0-d167f92bce7a/public_url" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <img src="/images/IBM-DB.png" alt="Certificate Badge">
+                    <div class="certification-info">
+                        <h3>SQL and Relational Databases 101</h3>
+                        <p>Description.</p>
+                        <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/f5bc04ce391d43ca9756ea7c756008c2" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <img src="/images/python-developer.png" alt="Certificate Badge">
+                    <div class="certification-info">
+                        <h3>Python Developer</h3>
+                        <p>Description.</p>
+                        <a href="https://www.sololearn.com/certificates/CC-VMNCHVBW" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects-gallery">
+            <h2>Projects Gallery</h2>
+            <div class="gallery-container">
+                <div class="project-card">
+                    <img src="/images/RPS.png" alt="Project Image">
+                    <div class="project-info">
+                        <h3>Rock Paper Scissors</h3>
+                        <p>Short description of the project.</p>
+                        <a href="#" target="_blank">Live Demo</a> |
+                        <a href="https://github.com/thobekaguma/RPS-Game" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/images/portfolio.png" alt="Project Image">
+                    <div class="project-info">
+                        <h3>My Portfolio</h3>
+                        <p>Short description of the project.</p>
+                        <a href="#" target="_blank">Live Demo</a> |
+                        <a href="https://github.com/thobekaguma/Portfolio" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thobeka Guma. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
