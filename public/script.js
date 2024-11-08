@@ -71,12 +71,16 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             body: JSON.stringify({ name, email, message })
         });
 
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
         const result = await response.json();
         alert(result.message);
     } catch (error) {
         console.error('Error:', error);
-        alert('There was an error sending the message.');
+        alert('There was an error sending the message. Please try again later.');
     }
-    this.reset();
 });
+
 

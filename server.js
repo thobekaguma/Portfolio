@@ -22,6 +22,10 @@ const transporter = nodemailer.createTransport({
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
+    if (!name || !email || !message) {
+        return res.status(400).json({ error: 'All fields are required' });
+    }
+
     const mailOptions = {
         from: email,
         to: process.env.EMAIL_USER,
@@ -31,13 +35,13 @@ app.post('/send', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error("Error:", error.message);
-            res.status(500).json({ error: 'Error sending email' });
-        } else {
-            res.status(200).json({ message: 'Thank you for your message! I will get back to you soon.' });
+            console.error('Error:', error.message);
+            return res.status(500).json({ error: 'Error sending email' });
         }
+        return res.status(200).json({ message: 'Message sent successfully!' });
     });
 });
+
 
 // Serve frontend on root path
 app.get('/', (req, res) => {
