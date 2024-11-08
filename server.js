@@ -5,7 +5,8 @@ const path = require('path');
 const app = express();
 
 // Middleware
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, '/public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // Nodemailer transporter configuration with environment variables
@@ -36,12 +37,11 @@ app.post('/send', (req, res) => {
             res.status(200).json({ message: 'Thank you for your message! I will get back to you soon.' });
         }
     });
-    
 });
 
 // Serve frontend on root path
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
