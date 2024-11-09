@@ -8,11 +8,15 @@ const app = express();
 app.use(cors());
 
 // Middleware
-// app.use(express.static(path.join(__dirname, '/public')));
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(cors({
+    origin: ['https://thobekaguma.netlify.app'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Accept']
+}));
 app.use(express.json());
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
-// Nodemailer transporter configuration with environment variables
+// Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -48,7 +52,6 @@ app.post('/send', (req, res) => {
 const isValidRequest = (name, email, message) => {
     return !name || !email || !message;
 }
-
 
 // Serve frontend on root path
 app.get('/', (req, res) => {
