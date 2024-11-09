@@ -63,7 +63,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const message = document.getElementById('message').value;
 
     try {
-        const response = await fetch('/send', {
+        const response = await fetch('https://portfolio-backend-9ttq.onrender.com/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

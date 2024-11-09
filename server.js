@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!isValidRequest(name, email, message)) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -41,6 +41,10 @@ app.post('/send', (req, res) => {
         return res.status(200).json({ message: 'Message sent successfully!' });
     });
 });
+
+const isValidRequest = (name, email, message) => {
+    return !name || !email || !message;
+}
 
 
 // Serve frontend on root path
