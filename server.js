@@ -2,7 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 // Middleware
 // app.use(express.static(path.join(__dirname, '/public')));
