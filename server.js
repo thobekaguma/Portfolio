@@ -5,15 +5,15 @@ const path = require('path');
 const cors = require('cors');
 const app = express();
 
-app.use(cors());
 
 // Middleware
+app.use(express.json());
+
 app.use(cors({
-    origin: ['https://thobekaguma.netlify.app'],
+    origin: ['https://portfolio-frontend-yjgl.onrender.com'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Accept']
 }));
-app.use(express.json());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Nodemailer transporter configuration
@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
-    if (!isValidRequest(name, email, message)) {
+    if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -49,9 +49,6 @@ app.post('/send', (req, res) => {
     });
 });
 
-const isValidRequest = (name, email, message) => {
-    return !name || !email || !message;
-}
 
 // Serve frontend on root path
 app.get('/', (req, res) => {
