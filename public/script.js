@@ -1,23 +1,3 @@
-
-// Theme Toggle Functionality
-const themeToggleButton = document.getElementById('theme-toggle');
-let darkTheme = false;
-
-themeToggleButton.addEventListener('click', () => {
-    let themeButton = document.querySelector('#theme-toggle');
-    if (!darkTheme) {
-        document.body.style.backgroundColor = '#333';
-        document.body.style.color = '#1571da';
-        themeButton.textContent = 'Light';
-        darkTheme = true;
-    } else {
-        document.body.style.backgroundColor = '#f0f0f3';
-        document.body.style.color = '#333';
-        themeButton.textContent = 'Dark';
-        darkTheme = false;
-    }
-});
-
 // Tech Modal Functionality
 function showTechInfo(tech) {
     const techInfoModal = document.getElementById('tech-info-modal');
@@ -39,7 +19,7 @@ function showTechInfo(tech) {
     };
 
     techTitle.textContent = tech;
-    techDescription.textContent = techData[tech] || 'Details not available.';
+    techDescription.textContent = techData[tech];
     techInfoModal.style.display = 'block';
 }
 
