@@ -2,12 +2,11 @@
     --background-color: #f0f0f3;
     --text-color: #333;
     --primary-color: #1571da;
-    --accent-color: #e94e77;
-    --header-background: #333;
+    --header-background: #fff;
     --footer-background: #444;
     --card-background: #fff;
     --card-shadow: rgba(0, 0, 0, 0.15);
-    --shape-color: rgba(233, 78, 119, 0.1);
+    --shape-color: rgba(160, 157, 159, 0.1);
 }
 
 
@@ -37,20 +36,19 @@ body {
 
 header {
     background: var(--header-background);
-    color: #fff;
-    padding: 1em;
+    color: #333;
+    padding: 1.5em;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
-header h1 {
-    font-size: 1.8em;
-    text-shadow: 2px 2px var(--accent-color);
+header p {
     margin: 0;
+    font-size: 1em;
 }
 
 .nav-container {
@@ -66,13 +64,13 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-size: 1em;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+a:hover {
     color: var(--primary-color);
 }
 
@@ -114,8 +112,8 @@ nav a:hover {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: #fff;
+    background: linear-gradient(135deg, var(--footer-background), var(--background-color));
+    color: #000;
     padding: 5em 2em;
     text-align: center;
     border-radius: 8px;
@@ -132,7 +130,7 @@ nav a:hover {
     left: -50px;
     width: 200px;
     height: 200px;
-    background: var(--accent-color);
+    background: var(--background-color);
     border-radius: 50%;
     opacity: 0.4;
     animation: move 20s linear infinite;
@@ -145,7 +143,7 @@ nav a:hover {
     right: -50px;
     width: 150px;
     height: 150px;
-    background: var(--primary-color);
+    background: var(--background-color);
     border-radius: 50%;
     opacity: 0.3;
     animation: move 15s linear infinite reverse;
@@ -182,7 +180,7 @@ h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 0.5em;
-    color: var(--primary-color);
+    color: var(--footer-background);
 }
 
 .tech-list {
@@ -201,53 +199,28 @@ h2 {
     height: auto;
 }
 
-.skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+#skills-showcase {
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
 }
 
-.skill-bar {
-    background: var(--primary-color);
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: width 0.5s ease;
+#skills-showcase h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.skill-bar:before {
-    content: '';
-    display: block;
-    height: 100%;
-    background: var(--accent-color);
-    width: var(--width);
-    transition: width 0.5s ease;
+#skills-showcase h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555;
 }
 
-.certification-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+#skills-showcase p img {
+    margin-right: 5px;
 }
-
-.certification-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--card-background);
-    border-radius: 8px;
-    padding: 1em;
-    box-shadow: 0 2px 5px var(--card-shadow);
-}
-
-
-.certification-item img {
-    width: 200px;
-    height: auto;
-}
-
 
 .modal {
     display: none;
@@ -285,41 +258,121 @@ h2 {
     cursor: pointer;
 }
 
-/* Form Styles */
-form {
+.certification-list {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-form input, form textarea {
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.certification-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.certification-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.certification-item a:hover {
+    font-size: 20px;
+}
+
+.certification-item img {
+    width: 200px;
+    height: auto;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+/* Form Styles */
+
+#contact-form {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: var(--background-color);
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 20px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--footer-background);
+    box-shadow: var(--card-shadow);
 }
 
 form button {
-    background: var(--primary-color);
-    padding: 0.5em;
-    color: #fff;
+    width: 50%;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: var(--footer-background);
+    color: #fff;
+    font-size: 1em;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 form button:hover {
-    background: #0e5db6;
+    background: #000;
 }
 
+
 footer {
-    background: var(--footer-background);
-    color: #fff;
+    background: #fff;
+    color: #333;
     text-align: center;
     padding: 1em;
-    position: relative;
     margin-top: 2em;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
 }
 
 

@@ -19,12 +19,11 @@
 </head>
 <body>
     <header>
-        <h1>Thobeka Guma</h1>
+        <p>Thobeka Guma</p>
         <nav class="nav-container">
             <a href="#about">About</a>
-            <a href="#projects-gallery">Projects</a>
-            <a href="#tech-stack">Skills & Tech Stack</a>
-            <a href="#certifications">Certifications</a>
+            <a href="#tech-stack">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -35,12 +34,10 @@
     <div class="shape shape-4"></div>
 
     <main>
-
         <section id="about" class="hero">
             <img src="public/images/IMG_3663.jpg" alt="Thobeka Guma" class="profile-photo">
             <p>I'm a web developer with a passion for creating engaging and user-friendly experiences. I love working on challenging projects that push my skills to the next level.</p>
         </section>
-
         <section id="tech-stack">
             <h2>Tech Stack Explorer</h2>
             <div class="tech-list">
@@ -80,14 +77,30 @@
 
         <section id="skills-showcase">
             <h2>Skills and Tools Showcase</h2>
-            <div class="skills-list">
-                <div class="skill-bar" style="--width: 90%;">Hosting on AWS Cloud</div>
-                <div class="skill-bar" style="--width: 80%;">Familiar with VSCode and JetBrains Editors</div>
-            </div>
-            <h3>Currently Learning</h3>
-            <p>Docker, ETL Pipelines.</p>
-        </section>
 
+            <div class="skills-list">
+                <h3>Cloud Platforms</h3>
+                <div class="skill-bar">
+                    <span>Hosting on AWS Cloud</span>
+                    <div class="progress" style="--width: 90%;"></div>
+                </div>
+
+                <h3>Development Tools</h3>
+                <div class="skill-bar">
+                    <span>Familiar with VSCode and JetBrains Editors</span>
+                    <div class="progress" style="--width: 80%;"></div>
+                </div>
+            </div>
+
+            <h3>Currently Learning</h3>
+            <p>
+                <img src="public/icons/docker-svgrepo-com.svg" alt="Docker Icon" style="width: 24px; vertical-align: middle;">
+                Docker
+                &nbsp;|&nbsp;
+                <img src="public/icons/pipeline-svgrepo-com.svg" alt="ETL Icon" style="width: 24px; vertical-align: middle;">
+                ETL Pipelines
+            </p>
+        </section>
         <section id="certifications">
             <h2>Certifications and Learning Journey</h2>
             <div class="certification-list">
@@ -95,7 +108,6 @@
                     <img src="public/images/web-development-fundamentals.png" alt="Certificate Badge">
                     <div class="certification-info">
                         <h3>Web Development Fundamentals</h3>
-                        <p>Description.</p>
                         <a href="https://www.credly.com/badges/f826d27a-d0cb-4fbd-b4e0-d167f92bce7a/public_url" target="_blank">View Certificate</a>
                     </div>
                 </div>
@@ -103,7 +115,6 @@
                     <img src="public/images/IBM-DB.png" alt="Certificate Badge">
                     <div class="certification-info">
                         <h3>SQL and Relational Databases 101</h3>
-                        <p>Description.</p>
                         <a href="https://courses.skillsbuild.skillsnetwork.site/certificates/f5bc04ce391d43ca9756ea7c756008c2" target="_blank">View Certificate</a>
                     </div>
                 </div>
@@ -111,7 +122,6 @@
                     <img src="public/images/python-developer.png" alt="Certificate Badge">
                     <div class="certification-info">
                         <h3>Python Developer</h3>
-                        <p>Description.</p>
                         <a href="https://www.sololearn.com/certificates/CC-VMNCHVBW" target="_blank">View Certificate</a>
                     </div>
                 </div>
@@ -119,21 +129,46 @@
             </div>
         </section>
 
+        <h2>Contact</h2>
         <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <div style="display: flex; gap: 100px;">
+                <div>
+                    <div>
+                        <a href=""><img src="public/icons/gmail-svgrepo-com.svg" alt="Checkout my GitHub" style="max-width: 100px;"></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="public/icons/linkedin-round-svgrepo-com.svg" alt="Connect on LinkedIn" style="max-width: 100px;"></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="public/icons/github_git_icon_145985.svg" alt="Checkout my GitHub" style="max-width: 100px;"></a>
+                    </div>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div>
+                    <form id="contact-form" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
 
-                <button type="submit">Send Message</button>
-            </form>
+                            <div class="form-group">
+                                <label for="project">Project</label>
+                                <textarea id="project" name="project" rows="7" required></textarea>
+                            </div>
+
+                            <button type="submit">Send Message</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer>
