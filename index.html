@@ -13,9 +13,8 @@
     <meta property="og:image" content="images/thobza.jpeg">
     <meta property="og:url" content="https://your-portfolio-url.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thobeka Guma - Portfolio">
-    <meta name="twitter:description" content="Portfolio of Thobeka Guma, showcasing web development skills and projects.">
-    <meta name="twitter:image" content="/images/.jpeg">
+    <meta name="twitter:title" content="thobeka guma - Portfolio">
+    <meta name="twitter:description" content="Portfolio of thobeka guma, showcasing web development skills and projects.">
 </head>
 <body>
     <header>
@@ -35,8 +34,17 @@
 
     <main>
         <section id="about" class="hero">
-            <img src="public/images/IMG_3663.jpg" alt="Thobeka Guma" class="profile-photo">
-            <p>I'm a web developer with a passion for creating engaging and user-friendly experiences. I love working on challenging projects that push my skills to the next level.</p>
+            <div id="bio">
+                <p style="color: teal; font: 2em monospace; margin-bottom: 10px;">
+                    <strong>
+                        Full Stack Developer
+                    </strong>
+                </p>
+                <p>I'm a web developer with a passion for creating engaging and user-friendly experiences. I love working on challenging projects that push my skills to the next level.</p>
+            </div>
+            <div id="photo">
+                <img src="public/images/IMG_3663.jpg" alt="Thobeka Guma" class="profile-photo">
+            </div>
         </section>
         <section id="tech-stack">
             <h2>Tech Stack Explorer</h2>
@@ -58,11 +66,11 @@
                     <p>HTML</p>
                 </div>
                 <div class="tech-item" onclick="showTechInfo('CSS')">
-                    <img src="public/icons/file_type_css_icon_130661.svg" alt="CSS Icon">
+                    <img src="public/icons/css3-svgrepo-com.svg" alt="CSS Icon">
                     <p>CSS</p>
                 </div>
                 <div class="tech-item" onclick="showTechInfo('JavaScript')">
-                    <img src="public/icons/javascript_original_logo_icon_146455.svg" alt="JavaScript Icon">
+                    <img src="public/icons/javascript-svgrepo-com.svg" alt="JavaScript Icon">
                     <p>JavaScript</p>
                 </div>
             </div>
@@ -74,7 +82,6 @@
                 </div>
             </div>
         </section>
-
         <section id="skills-showcase">
             <h2>Skills and Tools Showcase</h2>
 
@@ -105,7 +112,7 @@
             <h2>Certifications and Learning Journey</h2>
             <div class="certification-list">
                 <div class="certification-item">
-                    <img src="public/images/web-development-fundamentals.png" alt="Certificate Badge">
+                    <img src="public/images/web-development-fundamentals.png" alt="Certificate Badge" style="height: 143px;">
                     <div class="certification-info">
                         <h3>Web Development Fundamentals</h3>
                         <a href="https://www.credly.com/badges/f826d27a-d0cb-4fbd-b4e0-d167f92bce7a/public_url" target="_blank">View Certificate</a>
@@ -128,19 +135,18 @@
 
             </div>
         </section>
-
         <h2>Contact</h2>
         <section id="contact">
             <div style="display: flex; gap: 100px;">
-                <div>
+                <div id="social-media">
                     <div>
-                        <a href=""><img src="public/icons/gmail-svgrepo-com.svg" alt="Checkout my GitHub" style="max-width: 100px;"></a>
+                        <a href="https://github.com/thobekaguma"><img src="public/icons/github_git_icon_145985.svg" alt="Checkout my GitHub" ></a>
                     </div>
                     <div>
-                        <a href=""><img src="public/icons/linkedin-round-svgrepo-com.svg" alt="Connect on LinkedIn" style="max-width: 100px;"></a>
+                        <a href="https://www.linkedin.com/in/thobekaguma/"><img src="public/icons/linkedin-round-svgrepo-com.svg" alt="Connect on LinkedIn"></a>
                     </div>
                     <div>
-                        <a href=""><img src="public/icons/github_git_icon_145985.svg" alt="Checkout my GitHub" style="max-width: 100px;"></a>
+                        <a href="https://www.facebook.com/thobeka.guma.7"><img src="public/icons//facebook-svgrepo-com.svg" alt="Add me on Facebook"></a>
                     </div>
                 </div>
 
@@ -162,13 +168,12 @@
                                 <textarea id="project" name="project" rows="7" required></textarea>
                             </div>
 
-                            <button type="submit">Send Message</button>
+                            <button type="submit">Send Message <img src="public/icons/external-link-symbol_icon-icons.com_73577.svg"></button>
                         </fieldset>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>

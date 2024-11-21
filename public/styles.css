@@ -5,10 +5,9 @@
     --header-background: #fff;
     --footer-background: #444;
     --card-background: #fff;
-    --card-shadow: rgba(0, 0, 0, 0.15);
+    /* --card-shadow: rgba(0, 0, 0, 0.15); */
     --shape-color: rgba(160, 157, 159, 0.1);
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -25,18 +24,11 @@ body {
 }
 
 
-.profile-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 header {
-    background: var(--header-background);
+    background: var(--background-color);
     color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
     padding: 1.5em;
     display: flex;
     align-items: center;
@@ -63,11 +55,10 @@ nav {
     gap: 1em;
 }
 
-nav a {
+a {
     color: #333;
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease;
+    transition: color font-size 0.3s ease;
 }
 
 a:hover {
@@ -112,42 +103,56 @@ a:hover {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--footer-background), var(--background-color));
-    color: #000;
-    padding: 5em 2em;
-    text-align: center;
-    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 12px;
     margin-bottom: 2em;
-    box-shadow: 0 8px 15px var(--card-shadow);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 5px var(--card-shadow);
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
+#bio {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bio p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+#photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
     width: 200px;
     height: 200px;
-    background: var(--background-color);
     border-radius: 50%;
-    opacity: 0.4;
-    animation: move 20s linear infinite;
+    margin-right: 20px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 150px;
-    height: 150px;
-    background: var(--background-color);
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: move 15s linear infinite reverse;
+.profile-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
 
 @keyframes move {
     0% { transform: translateY(0) translateX(0); }
@@ -183,6 +188,8 @@ h2 {
     color: var(--footer-background);
 }
 
+
+
 .tech-list {
     display: flex;
     flex-wrap: wrap;
@@ -197,29 +204,14 @@ h2 {
 .tech-item img {
     width: 50px;
     height: auto;
+    transition: transform 0.2s ease-in;
 }
 
-#skills-showcase {
-    padding: 20px;
-    background: #fff;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-}
-
-#skills-showcase h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#skills-showcase h3 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    color: #555;
-}
-
-#skills-showcase p img {
-    margin-right: 5px;
+.tech-item img:hover {
+    transform: scale(1.2);
+    border-radius: 2px;
+    background: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal {
@@ -258,6 +250,34 @@ h2 {
     cursor: pointer;
 }
 
+
+
+#skills-showcase {
+    padding: 20px;
+    /* background: #fff; */
+    /* border: 2px solid #ddd; */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+#skills-showcase h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#skills-showcase h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555;
+}
+
+#skills-showcase p img {
+    margin-right: 5px;
+}
+
+
+
 .certification-list {
     display: flex;
     flex-wrap: wrap;
@@ -268,16 +288,17 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--card-background);
     border-radius: 8px;
     padding: 1em;
     box-shadow: 0 2px 5px var(--card-shadow);
 }
 
-.certification-item a {
+/* .certification-item a {
     text-decoration: none;
     color: var(--primary-color);
-}
+    transition: font-size 0.3s ease;
+} */
+
 .certification-item a:hover {
     font-size: 20px;
 }
@@ -287,6 +308,8 @@ h2 {
     height: auto;
 }
 
+
+
 #contact {
     display: flex;
     justify-content: center;
@@ -294,7 +317,18 @@ h2 {
     gap: 20px;
     padding: 20px;
 }
-/* Form Styles */
+
+#social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+#social-media a img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50px;
+}
 
 #contact-form {
     width: 100%;
@@ -349,23 +383,40 @@ textarea:focus {
 }
 
 form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     width: 50%;
     padding: 15px;
     border: none;
     border-radius: 8px;
     background: var(--footer-background);
     color: #fff;
-    font-size: 1em;
+    font-size: 14px;
     cursor: pointer;
 }
 
 form button:hover {
     background: #000;
+    transform: translateY(-2px);
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form button img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
 }
 
 
+
 footer {
-    background: #fff;
+    background: var(--background-color);
     color: #333;
     text-align: center;
     padding: 1em;
@@ -374,6 +425,7 @@ footer {
     bottom: 0;
     z-index: 1000;
 }
+
 
 
 /* Small devices (mobiles, up to 600px) */
@@ -410,6 +462,18 @@ footer {
         font-size: 1.6em;
         text-align: left;
         margin: 1em 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
     }
 
     .skills-list {
