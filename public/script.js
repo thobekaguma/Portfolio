@@ -1,5 +1,4 @@
 // Tech Modal Functionality
-// Tech Modal Functionality
 function showTechInfo(tech) {
     const techInfoModal = document.getElementById('tech-info-modal');
     const techTitle = document.getElementById('tech-title');
@@ -20,21 +19,48 @@ function showTechInfo(tech) {
     techDescription.innerHTML = `<a href='${techLinks[tech]}' target='_blank'>View ${tech} Project on GitHub</a>`;
 
     techInfoModal.style.display = 'block';
-}
 
+    window.onclick = function (event) {
+        if (event.target === techInfoModal) {
+            closeModal();
+        }
+    };
+}
 
 function closeModal() {
-    document.getElementById('tech-info-modal').style.display = 'none';
+    const techInfoModal = document.getElementById('tech-info-modal');
+    techInfoModal.style.display = 'none';
+    window.onclick = null;
 }
 
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('tech-info-modal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-};
+// Project Modal Functionality
+function showProjectModal(title, imageSrc, link) {
+    const projectModal = document.getElementById('project-modal');
+    const modalImage = document.getElementById('project-modal-image');
+    const modalTitle = document.getElementById('project-modal-title');
+    const modalLink = document.getElementById('project-modal-link');
 
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalLink.href = link;
+
+    projectModal.style.display = 'block';
+
+    window.onclick = function (event) {
+        if (event.target === projectModal) {
+            closeProjectModal();
+        }
+    };
+}
+
+function closeProjectModal() {
+    const projectModal = document.getElementById('project-modal');
+    projectModal.style.display = 'none';
+    window.onclick = null;
+}
+
+
+// Contact Form Functionality
 document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 

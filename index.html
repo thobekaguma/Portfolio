@@ -10,11 +10,6 @@
     <meta name="author" content="Thobeka Guma">
     <meta property="og:title" content="Thobeka Guma - Portfolio">
     <meta property="og:description" content="Portfolio showcasing the skills and projects of Thobeka Guma, a full-stack developer.">
-    <meta property="og:image" content="images/thobza.jpeg">
-    <meta property="og:url" content="https://your-portfolio-url.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="thobeka guma - Portfolio">
-    <meta name="twitter:description" content="Portfolio of thobeka guma, showcasing web development skills and projects.">
 </head>
 <body>
     <header>
@@ -108,6 +103,30 @@
                 ETL Pipelines
             </p>
         </section>
+
+
+            <section id="projects">
+                <h2>Projects Gallery</h2>
+                <div class="project-list">
+                    <div class="project-item" onclick="showProjectModal('My SheCodes Weather App', 'public/images/weather_app.png', 'https://thobekaguma.github.io/shecodes_weather/')">
+                        <img src="public/images/weather_app.png" alt="My Weather App">
+                        <div class="certification-info">
+                            <h3>My SheCodes Weather App</h3>
+                            <a href="https://thobekaguma.github.io/shecodes_weather/" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="project-modal" class="project-modal">
+                    <div class="project-modal-content">
+                        <span class="project-close-button" onclick="closeProjectModal()">&times;</span>
+                        <img id="project-modal-image" src="" alt="Project Image">
+                        <h3 id="project-modal-title"></h3>
+                        <a id="project-modal-link" href="" target="_blank">View Live Demo</a>
+                    </div>
+                </div>
+            </section>
+
+            
         <section id="certifications">
             <h2>Certifications and Learning Journey</h2>
             <div class="certification-list">
